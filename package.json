@@ -1,0 +1,25 @@
+{
+  "name": "tsc-go",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidkoojohn/tsc-go.git"
+  },
+  "keywords": [],
+  "author": "John Kuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidkoojohn/tsc-go/issues"
+  },
+  "homepage": "https://github.com/davidkoojohn/tsc-go#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^4.0.2",
+    "typescript": "^2.8.3"
+  }
+}
