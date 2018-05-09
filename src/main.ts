@@ -7,5 +7,5 @@ function showHello(divName: string, name: string) {
   elt.innerText = sayHello(name)
   console.log(sayHello(name))
 }
-debugger
+
 showHello('greeting', 'TypeScript')
