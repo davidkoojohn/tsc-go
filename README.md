@@ -16,4 +16,7 @@ $ npm install --save-dev browserify tsify vinyl-source-stream
 // Watchify启动Gulp并保持运行状态，当你保存文件时自动编译。 帮你进入到编辑-保存-刷新浏览器的循环中。
 // Uglify帮你压缩代码，将花费更少的时间去下载它们。
 $ npm install --save-dev watchify gulp-util
+
+// 首先安装Uglify。 因为Uglify是用于混淆你的代码，所以我们还要安装vinyl-buffer和gulp-sourcemaps来支持sourcemaps。
+$ npm install --save-dev gulp-uglify vinyl-buffer gulp-sourcemaps
 ```
