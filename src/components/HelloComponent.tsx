@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../assets/stylesheets/components/hello-component.css'
 
 export interface Props {
   name: string;
@@ -19,9 +20,9 @@ class HelloComponent extends React.Component<Props, object> {
 
     return (
       <div className="hello">
-        <h1 className="greeting">
+        <div className="greeting">
           Hello {name + getExclamationMarks(enthusiasmLevel)}
-        </h1>
+        </div>
       </div>
     );
   }
