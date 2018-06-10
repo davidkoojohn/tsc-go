@@ -3,10 +3,13 @@ import './assets/App.css';
 
 import logo from './assets/logo.svg';
 
+import HelloComponent from './components/HelloComponent'
+
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
+        <HelloComponent name={'koo'} enthusiasmLevel={3} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
