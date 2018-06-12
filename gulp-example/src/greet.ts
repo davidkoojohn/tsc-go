@@ -1,5 +1,5 @@
 export function sayHello(name: string) {
-
+/*
   // boolean
   let isDone: boolean = false
   console.log(isDone)
@@ -38,9 +38,55 @@ export function sayHello(name: string) {
   // Initialize it
   x = ['hello', 10]; // OK
   console.log(x)
+
+
+  // console.log(x[0].substr(1)); // OK
+  // console.log(x[1].substr(1));
   // Initialize it incorrectly
-  x = [10, 'hello']; // Error
-  console.log(x)
+  // x = [10, 'hello']; // Error
+  // console.log(x)
+
+  // enum 枚举
+  // enum Color {Red, Green, Blue}
+  // enum Color {Red = 1, Green, Blue}
+  // let c: Color = Color.Green;
+  // console.log(c)
+  // console.log(Color)
+
+  enum Color {Red = 1, Green, Blue}
+  let colorName: string = Color[2];
+  console.log(colorName)
+
+  // any
+  let notSure: any = 4;
+  notSure = "maybe a string instead";
+  console.log(notSure)
+  notSure = false;
+  console.log(notSure)
+
+  let testStr: string = 'koo'
+  console.log(typeof testStr)
+  testStr = 1
+  console.log(typeof testStr)
+  let prettySure: Object = 4;
+  prettySure.toFixed();
+  console.log(prettySure)
+    // void
+  function warnUser(): void {
+    alert("This is my warning message");
+  }
+  warnUser()
+  // null, undefined
+  // never
+  // object
+*/
+
+// 类型断言
+  let someValue: any = "this is a string";
+  // let strLength: number = (<string>someValue).length;
+  let strLength: number = (someValue as string).length;
+  console.log(strLength)
+
 
   return `Hello from ${name}`;
 }
