@@ -45,3 +45,5 @@ yarn-error.log*
 
 *.map
 dist
+
+gulp-example/src/*.js
