@@ -23,18 +23,9 @@ var watchedBrowserify = watchify(browserify({
   packageCache: {}
 }).plugin(tsify))
 
-// var ts = require('gulp-typescript')
-// var tsProject = ts.createProject('tsconfig.json')
-
 gulp.task('copy-html', function () {
   return gulp.src(paths.pages).pipe(gulp.dest('dist'))
 })
-
-/*gulp.task('default', function () {
-  return tsProject.src()
-    .pipe(tsProject())
-    .js.pipe(gulp.dest('dist'))
-})*/
 
 function bundle() {
   return watchedBrowserify
@@ -54,19 +45,3 @@ function bundle() {
 gulp.task('default', ['copy-html'], bundle)
 watchedBrowserify.on('update', bundle)
 watchedBrowserify.on('log', gutil.log)
-
-/*gulp.task('default', ['copy-html'], function () {
-  return browserify({
-    basedir: '.',
-    debug: true,
-    entries: ['src/main.ts'],
-    cache: {},
-    packageCache: {}
-  }).plugin(tsify)
-    .bundle()
-    .pipe(source('bundle.js'))
-    .pipe(gulp.dest('dist'))
-})*/
-
-
-
