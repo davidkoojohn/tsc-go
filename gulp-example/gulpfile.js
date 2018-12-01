@@ -7,6 +7,10 @@ var tsify = require('tsify')
 var watchify = require('watchify')
 var gutil = require('gulp-util')
 
+var uglify = require('gulp-uglify')
+var sourcemaps = require('gulp-sourcemaps')
+var buffer = require('vinyl-buffer')
+
 var paths = {
   pages: 'src/*.html'
 }
@@ -36,6 +40,10 @@ function bundle() {
   return watchedBrowserify
     .bundle()
     .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist'))
 }
 
