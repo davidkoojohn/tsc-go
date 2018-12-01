@@ -1,5 +1,3 @@
-function hello(compiler: string) {
-  console.log(`hello ${compiler}`)
-}
+import { sayHello } from './greet'
 
-hello('ts')
+console.log(sayHello('ts'))
