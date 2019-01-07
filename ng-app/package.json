@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "gh-pages -d dist/ng-app"
+    "deploy": "gh-pages -d dist/ng-app",
+    "gh-pages": "git push && npm run build && git add . && git commit -m 'chore: build demo' --allow-empty && git push && git subtree push --prefix=dist/ng-app origin gh-pages"
   },
   "private": true,
   "dependencies": {
