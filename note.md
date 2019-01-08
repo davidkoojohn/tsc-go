@@ -3,6 +3,10 @@
 - 模块
 - 命名空间
 
+- @types
+- 环境生命
+- 接口
+
 ----
 
 通过 `declare module 'somePath'` 来声明一个全局模块的方式
@@ -89,7 +93,28 @@ type Callback = (data: string) => void;
 // 2. 为一个简单的对象类型（像例子中的 Coordinates）使用类型别名，仅仅有一个语义化的作用。与此相似，当你想给一个联合类型和交叉类型使用一个语意化的名称时，一个类型别名将会是一个好的选择。
 ```
 
+接口
 
+```typescript
+// Lib a.d.ts
+interface Point {
+  x: number,
+  y: number
+}
+declare const myPoint: Point
+```
+
+类可以实现接口：使用 `implements（实现）` 关键字来确保兼容性：
+
+```typescript
+class MyPoint implements Point {
+  x: number;
+  y: number; // Same as Point
+}
+// 限制了类实例的结构
+let foo: Point = new MyPoint()
+// !== foo: Point = MyPoint
+```
 
 
 
